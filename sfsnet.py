@@ -236,8 +236,6 @@ class sfsnet(nn.Module):
         self.logit6 = nn.Conv2d(256, num_class, kernel_size=1)
 
         self.num_class = num_class
-        self.num_cls = num_cls
-        self.cls_head = nn.Linear(256, num_cls)
 
     def forward(self, x, superpixel):
         _, _, H, W = x.shape
@@ -286,7 +284,7 @@ if __name__ == "__main__":
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         input_img = torch.randn(1, 3, 224, 224).to(device)
         sp_img = torch.randn(1, 3, 224, 224).to(device)
-        model = sfsnet(num_cls=1,num_class=1).to(device)
+        model = sfsnet(num_cls=1).to(device)
 
 
         flops, params = profile(model, inputs=(input_img,sp_img))
@@ -295,3 +293,4 @@ if __name__ == "__main__":
         print(f"Total Parameters: {params / 1e6:.2f} M")
 
         print(f"Total GFLOPs: {flops / 1e9:.3f} G")
+
