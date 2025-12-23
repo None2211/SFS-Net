@@ -13,8 +13,4 @@ All datasets are organized and used for training, validation, and testing strict
 5. Once the training is complete, you can run the test.py to test your model. Run the code : python test.py
 
 
-## Quick Inference
-### Download the pre-trained model from [[Google Drive](https://drive.google.com/file/d/180JsahYjJkhnHEXbPHpet5BKo9pS7Bm0/view?usp=drive_link)]
-### Download the SFS-Net pretrained models [[Google Drive](https://drive.google.com/file/d/1paCS9QiZQ5H_m_TADVsYw0-dNJDTjmkM/view?usp=drive_link))]
-### Run ```infer.py```
 
