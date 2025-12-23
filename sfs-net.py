@@ -81,7 +81,7 @@ class RFFEL(nn.Module):
             nn.Conv2d(in_channels * 2, in_channels * 2, kernel_size=1),
             nn.BatchNorm2d(in_channels * 2),
             nn.ReLU(inplace=True),
-            nn.Conv2d(in_channels * 2, in_channels * 2, kernel_size=1)
+            nn.Conv2d(in_channels * 2, in_channels * 2, kernel_size=1,,groups=in_channels *2)
         )
 
     def forward(self, x):
@@ -293,4 +293,5 @@ if __name__ == "__main__":
 
 
         print(f"Total Parameters: {params / 1e6:.2f} M")
+
         print(f"Total GFLOPs: {flops / 1e9:.3f} G")
