@@ -11,6 +11,7 @@ All datasets are organized and used for training, validation, and testing strict
 3. Use ```slic_extractor.py```  to extract the superpixel images corresponding to the input images
 4. And then run the code：python train.py Note that the parameters and paths should be set beforehand
 5. Once the training is complete, you can run the test.py to test your model. Run the code : python test.py
+6. test test
 
 
 
